@@ -1,0 +1,89 @@
+@use "../abstracts/abstracts" as ab;
+
+.active a{
+    color: ab.$color-primary;
+}
+.about {
+    padding: 50px 0px;
+    background: black;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        img {
+            width: 260px;
+            height: 330px;
+            border-radius: 80px;
+        }
+
+        .info {
+            h1 {
+                color: white;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+                &::after {
+                content: "";
+                width: 100px;
+                height: 3px;
+                background-color: ab.$color-primary;
+                display: block;
+                }
+            }
+
+            h2 {
+                color: grey;
+                margin-bottom: 30px;
+                font-size: 15px;
+            }
+
+            p{
+                color: white;
+                margin-bottom: 25px
+            }
+            .btn {
+                @include ab.boton();
+            }
+        }
+        
+    }
+    @include ab.breakpoint(desktop) {
+    height: calc(100vh - 161px);
+    background: linear-gradient(to right, #000000 60%, #3d3d3d 100%);
+    .container {
+        flex-direction: row;
+        gap: 80px;
+
+        .info{
+             width: 500px;
+
+            h1{
+                font-size: 40px;
+            }
+        }
+
+        img {
+            width: 335px;
+            height: 450px;
+            border-radius: 100px;
+        }
+    }
+
+    @include ab.breakpoint(desktopxl) {
+    height: calc(100vh - 151px);
+    .container {
+        flex-direction: row;
+        gap: 80px;
+
+        .info{
+             width: 700px;
+        }
+
+        img {
+            width: 500px;
+            height: 650px;
+            border-radius: 100px;
+        }
+    }
+
+}}}

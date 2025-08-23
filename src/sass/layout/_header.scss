@@ -1,0 +1,168 @@
+@use "../abstracts/abstracts" as ab;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0,0,0);
+    padding: 10px 20px;
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu-icon {
+        font-size: 25px;
+        // padding: 0px 30px;
+        cursor: pointer;
+        display: block;
+        color: white;
+        position: relative;
+        z-index: 4;
+
+        // Icono hamburguesa
+        &::before {
+            content: "\2630"; // Unicode hamburguesa ☰
+            font-size: 25px;
+            transition: opacity 0.2s;
+        }
+    }
+
+    // Cuando el menú está abierto, muestra la X
+    #menu-toggle:checked + .menu-icon::before {
+        content: "\2716"; // Unicode X ✖
+    }
+    .menu-cv {
+        align-self: center;
+        ul {
+            li {
+                a {
+                    display: flex;
+                    gap: 15px;
+                     @include ab.boton();
+ 
+                }
+            }
+        }
+    }
+
+    .menu {
+        margin-top: 45px;
+        background-color: ab.$color-primary;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: end;
+        align-self: center;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: 
+            max-height 0.4s ease,
+            opacity 0.4s ease,
+            transform 0.4s ease,
+            visibility 0.4s ease;
+        z-index: 3;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 30px;
+            position: relative;
+
+            li {
+                a {
+                    text-decoration: none;
+                    font-size: 18px;
+                    color: white;
+                    &:hover {
+                        color: grey;
+                        transition: color 0.4s;
+                    }
+                }
+            }
+        }
+    }
+
+    #menu-toggle:checked ~ .menu {
+        height: 100vh;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @include ab.breakpoint(desktop) {
+        .menu-icon {
+            display: none;
+        }
+        .menu-cv {
+            ul {
+                  padding: 10px 20px;
+            }
+        }
+        .menu {
+            display: block;
+            position: static;
+            box-shadow: none;
+            opacity: initial;
+            visibility: visible;
+            width: auto;
+            height: auto;
+            margin: 0;
+            background-color: transparent;
+            ul {
+                flex-direction: row;
+                gap: 40px;
+                padding: 10px 20px;
+
+                .active a{
+                    color: ab.$color-primary;
+                    cursor: default;
+                }
+
+                li {
+
+                    a {
+                        color: white;
+                        font-size: 15px;
+                        &:hover {
+                        color: ab.$color-primary;
+                        transition: color 0.4s;
+                    }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
