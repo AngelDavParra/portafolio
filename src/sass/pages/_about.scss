@@ -70,7 +70,7 @@
     }
 
     @include ab.breakpoint(desktopxl) {
-    height: calc(100vh - 151px);
+    height: calc(100vh - 161px);
     .container {
         flex-direction: row;
         gap: 80px;
