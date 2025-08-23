@@ -7,7 +7,6 @@ export default defineConfig( {
       rollupOptions: {
         input: {
           main: path.resolve(__dirname, 'index.html'),
-          location: path.resolve(__dirname, 'location.html'),
           about: path.resolve(__dirname, 'about.html'),
           portfolio: path.resolve(__dirname, 'portfolio.html'),
           resumen: path.resolve(__dirname, 'resumen.html'),
