@@ -1,0 +1,1 @@
+import"./main-BBr33Gxp.js";console.log("About page loaded");const t=document.getElementById("menu-toggle");t.addEventListener("change",function(){document.body.style.overflow=this.checked?"hidden":""});const n=document.querySelector(".active a");n.addEventListener("click",e=>{e.preventDefault()});
