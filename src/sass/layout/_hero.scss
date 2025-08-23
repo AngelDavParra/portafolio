@@ -7,7 +7,7 @@
     background-size: cover;
     background-position: center;
     .container {
-        height: calc(100vh - 70px);
+        height: calc(100vh - 80px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -51,7 +51,7 @@
         .social {
             display: flex;
             gap: 20px;
-            padding-bottom: 30px;
+            padding-bottom: 50px;
             a {
                 color: white;
                 font-size: 20px;
