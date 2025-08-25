@@ -1,0 +1,1 @@
+import"./main-CNVgC-ot.js";console.log("Portfolio JavaScript loaded");const t=document.getElementById("menu-toggle");t.addEventListener("change",function(){document.body.style.overflow=this.checked?"hidden":""});const o=document.querySelector(".active a");o.addEventListener("click",e=>{e.preventDefault()});
