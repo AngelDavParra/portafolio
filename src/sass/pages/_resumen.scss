@@ -31,7 +31,8 @@
             grid-template-rows: 1fr 20px;
             align-items: center;
             margin-bottom: 1rem;
-            border: 3px solid ab.$color-primary;
+            // border: 3px solid ab.$color-primary;
+            background-color: rgb(23, 23, 44);
             border-radius: 10px;
             
             .barra {
@@ -46,7 +47,7 @@
                 background-image: linear-gradient(to right, ab.$color-primary var(--progreso), transparent 0);
                 background-repeat: no-repeat;
                 grid-area: 2 / 1 /span 1 / span 3;
-                border: 3px double black;
+                border: 3px double rgb(65, 64, 64);
             }
             img {
                 width: 40px;

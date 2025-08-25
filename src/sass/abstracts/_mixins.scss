@@ -34,6 +34,9 @@
 
 // BUTTONS
 @mixin boton() {
+  display: inline-flex;         // para alinear contenido internamente
+  align-items: center;          // centra verticalmente
+  justify-content: center; 
   padding: 3px 30px;
   color: white;
   text-decoration: none;

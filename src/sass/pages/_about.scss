@@ -55,10 +55,13 @@
         gap: 80px;
 
         .info{
-             width: 500px;
+             width: 650px;
 
             h1{
                 font-size: 40px;
+            }
+            p {
+                font-size: 20px;
             }
         }
 
@@ -73,10 +76,17 @@
     height: calc(100vh - 165px);
     .container {
         flex-direction: row;
-        gap: 80px;
+        gap: 180px;
 
         .info{
-             width: 700px;
+             width: 800px;
+
+            h1{
+                font-size: 50px;
+            }
+            p {
+                font-size: 25px;
+            }
         }
 
         img {
