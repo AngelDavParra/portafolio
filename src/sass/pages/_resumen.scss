@@ -64,10 +64,13 @@
     }
 
     @include ab.breakpoint(desktop) {
-
         .container{
             width: 60%;
         }
+    }
+
+    @include ab.breakpoint(desktopxl) {
+          height: calc(100vh - 112px);
     }
  
 }

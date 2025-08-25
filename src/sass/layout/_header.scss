@@ -3,15 +3,13 @@
 header {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0,0,0);
+    background-color: black;
     padding: 10px 20px;
     #menu-toggle {
         display: none;
     }
 
     .menu-icon {
-        font-size: 25px;
-        // padding: 0px 30px;
         cursor: pointer;
         display: block;
         color: white;
@@ -21,7 +19,7 @@ header {
         // Icono hamburguesa
         &::before {
             content: "\2630"; // Unicode hamburguesa ☰
-            font-size: 25px;
+            font-size: 23px;
             transition: opacity 0.2s;
         }
     }
@@ -46,7 +44,7 @@ header {
 
     .menu {
         margin-top: 45px;
-        background-color: ab.$color-primary;
+        background: linear-gradient( white 20%, #3d3d3d 100%);
         width: 100vw;
         height: 100vh;
         position: fixed;
@@ -68,15 +66,16 @@ header {
         ul {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 40px;
             padding: 20px 30px;
             position: relative;
 
             li {
                 a {
                     text-decoration: none;
-                    font-size: 18px;
-                    color: white;
+                    font-size: 20px;
+                    color: rgb(109, 109, 109);
+                    border-bottom: 1px solid grey;
                     &:hover {
                         color: grey;
                         transition: color 0.4s;
@@ -91,6 +90,7 @@ header {
         opacity: 1;
         visibility: visible;
     }
+
 
     @include ab.breakpoint(desktop) {
         .menu-icon {
@@ -110,7 +110,7 @@ header {
             width: auto;
             height: auto;
             margin: 0;
-            background-color: transparent;
+            background:black;
             ul {
                 flex-direction: row;
                 gap: 40px;
@@ -122,10 +122,10 @@ header {
                 }
 
                 li {
-
                     a {
                         color: white;
                         font-size: 15px;
+                        border-bottom: none;
                         &:hover {
                         color: ab.$color-primary;
                         transition: color 0.4s;

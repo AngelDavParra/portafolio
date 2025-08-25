@@ -84,7 +84,7 @@
     }
 
     @include ab.breakpoint(desktop) {
-        height: calc(100vh - 69px);
+        height: calc(100vh - 70px);
         .container {
             h1 {
                 font-size: 50px;
